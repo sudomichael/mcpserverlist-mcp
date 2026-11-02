@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.sudomichael/mcpserverlist-mcp",
   "title": "MCP Server List",
-  "description": "Check whether your MCP server is ready for MCP directories and get it submitted. Proxies the hosted MCP Server List service.",
+  "description": "Check if your MCP server is ready for MCP directories, then get it submitted.",
   "websiteUrl": "https://mcpserverlist.io",
   "repository": {
     "url": "https://github.com/sudomichael/mcpserverlist-mcp",
@@ -15,7 +15,9 @@
       "registryBaseUrl": "https://registry.npmjs.org",
       "identifier": "mcpserverlist-mcp",
       "version": "0.1.0",
-      "transport": { "type": "stdio" },
+      "transport": {
+        "type": "stdio"
+      },
       "environmentVariables": [
         {
           "name": "MCP_SERVER_LIST_API_KEY",
