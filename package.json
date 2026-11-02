@@ -1,0 +1,44 @@
+{
+  "name": "mcpserverlist-mcp",
+  "version": "0.1.0",
+  "description": "Stdio MCP server that proxies to the hosted MCP Server List service: check whether your MCP server is ready for directories and get it submitted.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
+    "directory"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sudomichael/mcpserverlist-mcp.git"
+  },
+  "homepage": "https://mcpserverlist.io",
+  "mcpName": "io.github.sudomichael/mcpserverlist-mcp",
+  "bin": {
+    "mcpserverlist-mcp": "dist/index.js"
+  },
+  "main": "dist/proxy.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && chmod +x dist/index.js",
+    "test": "npm run build && tsc -p tsconfig.json && node --test dist-test/test/proxy.test.js",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "typescript": "^7.0.2"
+  }
+}

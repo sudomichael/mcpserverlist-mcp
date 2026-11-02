@@ -1,0 +1,41 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.sudomichael/mcpserverlist-mcp",
+  "title": "MCP Server List",
+  "description": "Check whether your MCP server is ready for MCP directories and get it submitted. Proxies the hosted MCP Server List service.",
+  "websiteUrl": "https://mcpserverlist.io",
+  "repository": {
+    "url": "https://github.com/sudomichael/mcpserverlist-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "mcpserverlist-mcp",
+      "version": "0.1.0",
+      "transport": { "type": "stdio" },
+      "environmentVariables": [
+        {
+          "name": "MCP_SERVER_LIST_API_KEY",
+          "description": "API key from the create_account tool. Optional: only needed for account-owned tools.",
+          "isRequired": false,
+          "isSecret": true
+        },
+        {
+          "name": "MCP_SERVER_LIST_URL",
+          "description": "Remote MCP endpoint to proxy to.",
+          "isRequired": false,
+          "default": "https://mcpserverlist.io/mcp"
+        }
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcpserverlist.io/mcp"
+    }
+  ]
+}
