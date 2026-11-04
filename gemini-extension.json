@@ -1,0 +1,9 @@
+{
+  "name": "mcpserverlist-mcp",
+  "version": "0.1.0",
+  "mcpServers": {
+    "mcpserverlist-mcp": {
+      "httpUrl": "https://mcpserverlist.io/mcp"
+    }
+  }
+}
